@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Explore from './components/Explore';
 import {
   BrowserRouter,
   Routes,
@@ -16,8 +17,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/explore" element={<Explore />} />
           {/* <Route exact path="/about" element={<About />} />
-          <Route exact path="/rules" element={<Rules />} />
           <Route exact path="/leaderboard" element={<Leaderboard />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/login" element={<Login />} />
