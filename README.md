@@ -30,3 +30,8 @@
 7. Submit your changes for review\
     If you go to your repository on GitHub, you'll see a Compare & pull request button. Click on that button.\
     Now submit the pull request.
+    git switch -c your-new-branch-name
+    git switch -c your-new-branch-name
+    git switch -c your-new-branch-name
+    git switch -c your-new-branch-name
+    git switch -c your-new-branch-name

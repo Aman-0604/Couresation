@@ -1,12 +1,12 @@
 import React from 'react'
 import "../styles/explore.css"
-// import Goal from './Goal';
-// import Profile from './Profile';
+import Goal from './Goal';
+import Profile from './Profile';
 export default function Explore() {
     return (
         <>
-            {/* <Profile username='Aman Gupta' emailid='techbugaman@gmail.com'/> */}
-            {/* <Goal title="Competitive Programming"/> */}
+            <Profile username='Aman Gupta' emailid='techbugaman@gmail.com'/>
+            <Goal title="Competitive Programming"/>
             <div className="container-fluid explore-background d-flex justify-content-center align-items-center" style={{ height: '200px' }}>
                 <div><h1 className='text-muted'>Choose your goal</h1></div>
             </div>
