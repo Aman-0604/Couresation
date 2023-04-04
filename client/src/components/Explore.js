@@ -5,7 +5,7 @@ import "../styles/explore.css"
 export default function Explore() {
     return (
         <>
-            {/* <Profile /> */}
+            {/* <Profile username='Aman Gupta' emailid='techbugaman@gmail.com'/> */}
             {/* <Goal title="Competitive Programming"/> */}
             <div className="container-fluid explore-background d-flex justify-content-center align-items-center" style={{ height: '200px' }}>
                 <div><h1 className='text-muted'>Choose your goal</h1></div>
