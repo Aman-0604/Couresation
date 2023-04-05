@@ -20,6 +20,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/explore" element={<Explore />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/signup" element={<Login Task='signup'/>} />
           {/* <Route exact path="/about" element={<About />} />
           <Route exact path="/leaderboard" element={<Leaderboard />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
