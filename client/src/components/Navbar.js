@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-export default function Navbar() {
+// import PropTypes from "prop-types";
+const propTypes = {};
+const defaultProps = {Page:"home"};
+export default function Navbar(props) {
+    console.log(props.Pa)
     return (
         <>
             {/* Navbar starts */}
@@ -17,13 +21,15 @@ export default function Navbar() {
                     </button>
 
                     {/* 'Log in' and 'Join for free' Buttons */}
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul className="navbar-nav mb-2 mb-lg-0">
+
+                    <div className={`collapse navbar-collapse justify-content-end`} id="navbarSupportedContent">
+                    {/* d-${props.Page === "home" ? "block" :"none"} */}
+                        <ul className={`navbar-nav mb-2 mb-lg-0 `}>
                             <li className="nav-item">
-                                <button type="button" className="btn btn-outline-success me-3">Log in</button>
+                                <button type="button" className="btn btn-outline-success me-3"><Link to="/login">Log in</Link></button>
                             </li>
                             <li className="nav-item">
-                                <button type="button" className="btn btn-secondary me-5">Join for free</button>
+                                <button type="button" className="btn btn-secondary me-5"><Link to="signup">Join for free</Link></button>
                             </li>
                         </ul>
                     </div>
@@ -33,3 +39,6 @@ export default function Navbar() {
         </>
     )
 }
+
+Navbar.propTypes = propTypes;
+Navbar.defaultProps = defaultProps;

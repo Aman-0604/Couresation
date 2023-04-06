@@ -1,11 +1,11 @@
 import React from 'react'
 // import styled from "styled-components";
-import PropTypes from "prop-types";
 import "../styles/login.css"
+// import PropTypes from "prop-types";
 const propTypes = {};
 const defaultProps = {Task:"logIn"};
 export default function Login(props) {
-  console.log(props.Task);
+  // console.log(props.Task);
   return (
 <div className="modal-body w-50 modal-dialog-centered border border-5" style={{margin:"auto",border:"black 5px solid" }}>
   <div class="container-fluid">
