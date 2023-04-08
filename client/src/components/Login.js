@@ -1,48 +1,50 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 // import styled from "styled-components";
 import "../styles/login.css"
 // import PropTypes from "prop-types";
 const propTypes = {};
-const defaultProps = {Task:"logIn"};
+const defaultProps = { Task: "logIn" };
 export default function Login(props) {
   // console.log(props.Task);
   return (
-<div className="modal-body w-50 modal-dialog-centered border border-5" style={{margin:"auto",border:"black 5px solid" }}>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6 left">
-        <p className='Heading'>Over <span className='Coloured'>8,00,000+</span> learners trust us for their preparation</p>
-        <div><img className="Images" id='ig1' src='../images/educators.png' alt='ImageError'/></div>
-        <div><img className="Images" id="ig2" src='../images/live-session.png' alt='ImageError'/></div>
-        <div><img className="Images" id="ig3" src='../images/mins-watched.png' alt='ImageError'/></div>
-        <div><img className="Images" id="ig4" src='../images/video-lessons.png' alt='ImageError'/></div>
-        <p>Learn from 2,000+ India’s top educators</p>
-        <p>Access 3,00,000+ live classes, test series, courses and more for free</p>
-      </div>
-
-      <div class="col-md-6 ms-auto">
-        <h2 className='fs-1 main'>{props.Task==="logIn" ? "LogIn" : "Join Courseation"}</h2>
-        <span className={`m-0 d-${props.Task==="logIn" ? "block" : "none"}`}>or <a className='fw-bold' href='/signup'>create a new account</a></span>
-        <form>
-        
-        <span className={`m-0 d-${props.Task==="logIn" ? "none" : "block"}`}>Already have an account? <a className="fw-bold" href='/login'>Log in</a></span>
-        <form></form>
-        
-        <div class={`mb-4 form d-${props.Task!=="logIn" ? "block" : "none"}`}>
-            <label for="exampleInputPassword1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="Name"/>
+    <>
+      <div className="container login-section my-5 d-flex flex-row w-75">
+        <div className="d-flex flex-row">
+          <div className="left-auth-section d-flex flex-column">
+            <div className="auth-photograph" style={{ border: '0' }}>
+              <img src="../images/courseation-promo-image.png" className="img-fluid" alt="..." />
+            </div>
+            <div className="courseation-promo mx-5">
+              <p><strong>Over <span style={{ color: "#3dd4a9" }}>8,00,000+</span> learners trust us for their preparation</strong></p>
+              <p className='text-muted'>Learn from 2,000+ India’s top educators</p>
+              <p className='text-muted'>Access 3,00,000+ live classes, test series, courses and more for free</p>
+            </div>
+          </div>
+          <div className="right-auth-section d-flex flex-column justify-content-center ms-5">
+            <h2 className='fs-1 main'>{props.Task === "logIn" ? "Log in" : "Join Courseation"}</h2>
+            <span className={`m-0 d-${props.Task === "logIn" ? "block" : "none"}`}>or <Link className='fw-bold' to='/signup'>create a new account</Link></span>
+            <form>
+              <span className={`m-0 d-${props.Task === "logIn" ? "none" : "block"}`}>Already have an account?<Link className="fw-bold" to='/login'>Log in</Link></span>
+              <div className={`mb-4 form d-${props.Task !== "logIn" ? "block" : "none"}`}>
+                <label htmlFor="exampleInputPassword1" className="form-label">Name</label>
+                <input type="text" className="form-control" id="Name" />
+              </div>
+              <div className="mb-4 form">
+                <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                <div id="emailHelp" className="form-text small">Trust Us, We will not Spam</div>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                <input type="password" className="form-control" id="exampleInputPassword1" />
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
+          </div>
         </div>
-        <div class="mb-4 form">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-            <div id="emailHelp" className="form-text small">Trust Us, We will not Spam</div>
-        </div>
-        <div className='text-center'><button type="submit" class="btn btn-primary btn-lg">Submit</button></div>
-</form>
       </div>
-    </div>
-  </div>
-</div>
+    </>
   )
 }
 

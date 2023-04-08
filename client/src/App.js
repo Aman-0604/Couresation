@@ -10,7 +10,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import StudeMaterial from './components/StudeMaterial';
+import StudyMaterial from './components/StudyMaterial';
 
 function App() {
   const [sub, setsub] = useState("DSA");
@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/explore" element={<Explore />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/signup" element={<Login Task='signup'/>} />
-          <Route exact path="/studymaterial" element={<StudeMaterial Title ={sub}/>} />
+          <Route exact path="/studymaterial" element={<StudyMaterial Title ={sub}/>} />
           {/* <Route exact path="/about" element={<About />} />
           <Route exact path="/leaderboard" element={<Leaderboard />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
