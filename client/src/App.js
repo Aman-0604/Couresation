@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Explore from './components/Explore';
 import Login from './components/Login';
+import Profile from './components/Profile';
+import Goal from './components/Goal';
 import {
   BrowserRouter,
   Routes,
@@ -26,6 +28,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/explore" element={<Explore />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/profile" element={<Profile username='Aman Gupta' emailid='techbugaman@gmail.com'/>} />
+          <Route exact path="/goal" element={<Goal title="Competitive Programming"/>} />
           <Route exact path="/signup" element={<Login Task='signup'/>} />
           <Route exact path="/studymaterial" element={<StudyMaterial Title ={sub}/>} />
           {/* <Route exact path="/about" element={<About />} />
