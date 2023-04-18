@@ -49,3 +49,12 @@ CORS provides a mechanism for web pages to make such requests by allowing the se
 
 The cors package in Node.js is a middleware that can be used to enable CORS in a Node.js application. It adds the required response headers to allow requests from specified domains, and also provides options for controlling the behavior of CORS, such as allowing cookies to be sent with cross-origin requests.
 
+---
+
+## Middleware 
+
+Middleware is a function in Express.js that can be used to modify incoming requests or outgoing responses before they are processed by the main application logic. Middleware functions can be used for a variety of tasks, such as logging, authentication, error handling, and more.
+
+For example, the isAuthenticated middleware function checks if the user is authenticated using the req.isAuthenticated() method. If the user is authenticated, it calls next() to allow access to the '/profile' route. If the user is not authenticated, it redirects the user to the '/login' page.
+
+Overall, middleware is a powerful feature of Express.js that allows developers to add additional functionality and customize the request/response handling in their applications.
