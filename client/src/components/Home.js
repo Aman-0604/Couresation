@@ -66,10 +66,9 @@ export default function Home() {
                         {/* Subheading */}
                         <div className="subheading-section-3 mb-4" style={{ width: '60%' }}><p>Download lessons and learn anytime, anywhere with the Courseation app</p></div>
 
-                        {/* Buttons */}
-                        <div className="buttons-section-3 d-flex flex-row align-items-center">
-                            <div className="app-store download-app-button">Downolad on the app store</div>
-                            <div className="google-play download-app-button mx-3">Get it on google play</div>
+                        {/* Download App */}
+                        <div className="w-50">
+                            <img src="../images/download-app.png" className="img-fluid" alt="download-app" />
                         </div>
                     </div>
 
