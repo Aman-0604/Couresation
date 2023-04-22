@@ -7,12 +7,13 @@ import Explore from './components/Explore';
 import Login from './components/Login';
 import Profile from './components/Profile';
 import Goal from './components/Goal';
+import StudyMaterial from './components/StudyMaterial';
+import About from './components/About';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import StudyMaterial from './components/StudyMaterial';
 
 function App() {
   const [sub, setsub] = useState("DSA");
@@ -32,10 +33,7 @@ function App() {
           <Route exact path="/goal" element={<Goal title="Competitive Programming"/>} />
           <Route exact path="/signup" element={<Login Task='signup'/>} />
           <Route exact path="/studymaterial" element={<StudyMaterial Title ={sub}/>} />
-          {/* <Route exact path="/about" element={<About />} />
-          <Route exact path="/leaderboard" element={<Leaderboard />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
-          <Route exact path="/signup" element={<Signup />} /> */}
+          <Route exact path="/about" element={<About />} />
         </Routes>
         <Footer changesubject={subject}/>
       </BrowserRouter>

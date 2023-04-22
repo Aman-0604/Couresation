@@ -12,7 +12,7 @@ export default function Footer(props) {
                             {/* Company */}
                             <h5>Company</h5>
                             <ul className="nav flex-column">
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">About Us</Link></li>
+                                <li className="nav-item mb-2"><Link to="about" className="nav-link p-0 text-muted">About Us</Link></li>
                                 <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Careers</Link></li>
                                 <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Blogs</Link></li>
                                 <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Privacy Policy</Link></li>

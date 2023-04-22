@@ -9,6 +9,7 @@ export default function Profile(props) {
                     <h1>{props.username}</h1>
                     <p>{props.emailid}</p>
                 </div>
+                <h3><span className="ms-2 mt-2 badge bg-secondary">Student</span></h3>
             </div>
         </>
     )
