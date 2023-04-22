@@ -31,8 +31,8 @@ export default function Login(props) {
           </div>
           <div className="right-auth-section d-flex flex-column justify-content-center ms-5">
             
-          <h2 className='fs-1 main'>{props.Task === "logIn" ? "Login": props.Task=== "forgetPassword" ? "Reset Password" : "Join Courseation"}</h2>
-            <span className={`m-0 d-${props.Task !== "forgetPassword" ? "block" : "none"}`}><Link className='fw-bold' to={props.Task === "logIn" ? '/signup':'/login'}> {props.Task === "logIn" ? 'Create New Account':'Already have an Acoount'}</Link></span>
+          <h2 className='fs-1 main mb-0'>{props.Task === "logIn" ? "Login": props.Task=== "forgetPassword" ? "Reset Password" : "Join Courseation"}</h2>
+            <span className={`m-0 d-${props.Task !== "forgetPassword" ? "block" : "none"}`}><Link className='fw-light small' to={props.Task === "logIn" ? '/signup':'/login'}> {props.Task === "logIn" ? 'Create New Account':'Already have an Account'}</Link></span>
             
             <form action = {`${props.Task === "signup" ? "/signUp": props.Task === "logIn" ? "/login":"forgetPassword"}`} method='post'>
 
@@ -50,7 +50,7 @@ export default function Login(props) {
               <div className={`mb-3 form d-${props.Task !== "forgetPassword" ? "block":"none"}`} >
                 <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                 <input type="password" className="form-control" id="Password" />
-                <span className={`m-0 d-${props.Task !== "logIn" ? "none" : "block"}`}><Link className="fw-bold" to='/forgetPassword'>Forget Password</Link></span>
+                <span className={`m-0 text-end d-${props.Task !== "logIn" ? "none" : "block"}`}><Link className="fw-light small" to='/forgetPassword'>Forget Password</Link></span>
               </div>
               <button type="submit" className="btn btn-primary">Submit</button>
             </form>
