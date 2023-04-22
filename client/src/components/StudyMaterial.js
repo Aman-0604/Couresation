@@ -8,7 +8,7 @@ const defaultProps = { Title: "DSA" };
 const StudyMaterial = (props) => {
     return (
         <>
-            <div className='text-muted row container my-5 mx-auto'>
+            <div className='text-muted row container my-5 m-auto'>
                 <div className='col-md-9'>
                     <h1 className='d-block text-center mb-4'>{props.Title} Study Material</h1>
                     <span className='text-decoration-underline' style={{ fontWeight: "bolder" }}>About the Subject</span>

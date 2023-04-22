@@ -32,6 +32,7 @@ function App() {
           <Route exact path="/profile" element={<Profile username='Aman Gupta' emailid='techbugaman@gmail.com'/>} />
           <Route exact path="/goal" element={<Goal title="Competitive Programming"/>} />
           <Route exact path="/signup" element={<Login Task='signup'/>} />
+          <Route exact path="/forgetPassword" element={<Login Task='forgetPassword'/>} />
           <Route exact path="/studymaterial" element={<StudyMaterial Title ={sub}/>} />
           <Route exact path="/about" element={<About />} />
         </Routes>
