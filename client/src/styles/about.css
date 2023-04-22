@@ -4,6 +4,11 @@
     background-size: cover;
 }
 
+.shadow-effect{
+    border: 0px;
+    box-shadow: 0px 16px 32px 0px rgba(233, 238, 242, 0.4);
+}
+
 .cards {
     margin: 45px;
     width: 300px;

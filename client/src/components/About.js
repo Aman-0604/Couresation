@@ -131,7 +131,7 @@ export default function About() {
             <div className="image_container">
               <img
                 className="w-100 h-auto"
-                src="/images/user.jpg"
+                src="/images/female-user.png"
                 alt="error"
               />
             </div>
@@ -144,7 +144,7 @@ export default function About() {
             <div className="image_container">
               <img
                 className="w-100 h-auto"
-                src="/images/user.jpg"
+                src="/images/female-user.png"
                 alt="error"
               />
             </div>
@@ -186,10 +186,23 @@ export default function About() {
           </div>
         </div>
       </div>
-      {/* Feedback Section
-      <div className="courseation-feedback d-flex flex-row align-items-center justify-content-center">
-        feedback do hume
-      </div> */}
+      {/* Feedback Section */}
+      <div className="courseation-feedback d-flex flex-row align-items-center justify-content-center my-5">
+        <div className="card mx-2 shadow-effect" style={{ width: "35rem" }}>
+          <img src="/images/public-relations.png" className="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">For media enquiry email us at <span style={{ color: "#67CEA2" }}>press@courseation.com</span></p>
+            <br />
+          </div>
+        </div>
+        <div className="card mx-2 shadow-effect" style={{ width: "35rem" }}>
+          <img src="/images/contact-us.png" className="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">Shoot your questions to us at <span style={{ color: "#67CEA2" }}>help@courseation.com</span></p>
+            <br />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
