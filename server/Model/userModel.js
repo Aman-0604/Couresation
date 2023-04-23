@@ -4,7 +4,7 @@ const conn = mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"",
-    database:"cricket_team",
+    database:"book",
     connectionLimit:10
 })
 conn.connect(function(err){
@@ -12,7 +12,7 @@ conn.connect(function(err){
         console.log(err);
     }
     else{
-        console.log("Good to go");
+        console.log("Database connected successfuly");
     }
 })
 module.exports = conn;

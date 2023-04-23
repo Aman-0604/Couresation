@@ -5,43 +5,49 @@ const LoginRouter = express.Router();
 const jwt = require("jsonwebtoken");
 const jwt_key = "dssad234132cds2yththet13";
 
-const bcrypt = require("bcrypt");
-
 const bodyParser = require('body-parser')
 const sa = bodyParser.urlencoded({ extended: false })
 
-const conn = require("../Model/userModel");
- 
+const bcrypt = require("bcrypt");
 
-async function setLogin(req,res){
+const conn = require("../Model/userModel");
+
+
+async function setLogin(req, res) {
     a = req.body;
+    console.log(a)
     //finding user to be verified 
-    await conn.query(`select * from user where email = "${a.Email}";`, async (err,result)=>{
-        if(err) {
+    await conn.query(`select * from user where email = "${a.email}";`, async (err, result) => {
+        if (err) {
             console.log(err);
-            res.send("Some error Occured,inconvenience cost is deeply regretted")
+            res.status(500).send("Some error Occured,inconvenience cost is deeply regretted")
         }
-        else if(!result.length){
+        else if (!result.length) {
             // no such user found
-            res.send("Not Registered!")
+            res.status(400).send("User not Registered!")
         }
 
         else {
             // checking password 
-            const t = await bcrypt.compare(a.Password,result[0].password); 
-            if(t){
-                const token = jwt.sign({uid:result[0].email},jwt_key); 
+            let success = false;
+            console.log(result);
+            console.log(result[0].password, a.password);
+            const t = await bcrypt.compare(a.password, result[0].password);
+            console.log(t)
+            if (t) {
+                const token = jwt.sign({ uid: result[0].email }, jwt_key);
+                success = true;
                 //creating cookies
-                res.cookie('isLogin',token);
-                res.send("Logged Successfully")
+                res.cookie('isLogin', token);
+                res.json({ success, token });
             }
-            else{
-                res.send("Incorrect Password")
+            else {
+                res.status(400).json('Invalid Credentials');
             }
         }
     })
 }
 
-LoginRouter.route("/") 
-.post(sa,setLogin)
+LoginRouter.route("/")
+    .post(sa, setLogin)
 module.exports = LoginRouter;

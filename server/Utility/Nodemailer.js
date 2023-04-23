@@ -24,7 +24,7 @@ module.exports.sendMail = async function sendMail(str,data) {
   else if(str=="ResetPassword"){
     oSubject = `Reset Passwors Link`;
     oHTML = `Here is a link to reset your password<br>
-    Link: <h1>http://localhost:3000/resetPassword/${data.resetToken}</h1>
+    Link: <h1>http://localhost:8000/resetPassword/${data.resetToken}</h1>
     <br>Click on the Link and set new Password`
   }
 

@@ -10,7 +10,6 @@ app.use(express.json());
 app.use(cookies());
 
 // Available Routes
-app.use('/', require("./Router/SignUp"))
 app.use('/signUp/', require("./Router/SignUp"))
 app.use('/login/', require("./Router/Login"))
 app.use('/logout/', require("./Router/Logout"))
