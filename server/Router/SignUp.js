@@ -13,9 +13,8 @@ const conn = require('../Model/userModel');
 
 const bcrypt = require("bcrypt");
 
-// const {sendMail} = require("../Utility/Nodemailer");
+const {sendMail} = require("../Utility/Nodemailer");
 
-// const { sendMail } = require("../Utility/Nodemailer");
 
 //For encoding
 addingSalt = async (password) => {
@@ -26,10 +25,10 @@ addingSalt = async (password) => {
 
 setSignUp = async function (req, res) {
     const a = req.body;
-    console.log(a);
+    // console.log(a);
     // Checking for duplicate entry
     await conn.query(`select * from user where email = "${a.email}";`, async (err, result) => {
-        console.log("result", result)
+        // console.log("result", result)
         if (err) {
             console.log(err);
             res.status(500).send("Some error Occured,inconvenience cost is deeply regretted")
@@ -51,10 +50,10 @@ setSignUp = async function (req, res) {
                     res.status(500).send("Some error Occured,inconvenience cost is deeply regretted")
                 }
                 else {
-                    // sendMail("SignedUp", a);
+                    sendMail("SignedUp", a);
                     success = true;
                     const token = jwt.sign({ uid: a.email }, jwt_key);
-                    res.cookie('isLogin', token);
+                    // res.cookie('isLogin', token);
                     res.json({ success, token })
                 }
             })
