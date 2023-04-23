@@ -8,8 +8,8 @@ module.exports.sendMail = async function sendMail(str,data) {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "abhishekgoyal11aug2003@gmail.com",
-      pass: "xuknxfrzyfuranfx"
+      user: "courseationStudyPartner@gmail.com",
+      pass: "qoddlvbdujgunbon"
     },
   });
 
@@ -22,15 +22,14 @@ module.exports.sendMail = async function sendMail(str,data) {
   }
   //For specifing that user wants to erset his/her password 
   else if(str=="ResetPassword"){
-    oSubject = `Reset Passwors Link`;
-    oHTML = `Here is a link to reset your password<br>
-    Link: <h1>http://localhost:8000/resetPassword/${data.resetToken}</h1>
-    <br>Click on the Link and set new Password`
+    oSubject = `Reset Passwords`;
+    oHTML = `Here is your link to reset password. Please keep it secure. Additionally, it's important to follow best practices for password management to ensure the safety and security of your account.<br>
+    Email: ${data.email}<br>ResetTokenLink: http//localhost:3000/resetPassword/${data.resetToken}`
   }
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Courseation" <abhishekgoyal11aug2003@gmail.com>', // sender address
+    from: '"Courseation" <courseationStudyPartner@gmail.com>', // sender address
     to: data.email,
     subject: oSubject, // Subject line
     html: oHTML, // html body

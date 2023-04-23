@@ -15,7 +15,7 @@ const {sendMail} = require("../Utility/Nodemailer");
 ForgetPassword = async function (req, res) {
     a = req.body;
     //Checking mail provided by user is present in DB or not
-    await conn.query(`select * from user where email = "${a.Email}";`, async (err,result)=>{
+    await conn.query(`select * from user where email = "${a.email}";`, async (err,result)=>{
         if(err) {
             console.log(err);
             res.send("Some error Occured,inconvenience cost is deeply regretted")
@@ -28,7 +28,7 @@ ForgetPassword = async function (req, res) {
             //creating Reset token
             const RT = crypto.randomBytes(32).toString('hex');
             //saving token in DB
-            await conn.query(`update user set resetToken="${RT}" where email="${a.Email}" and name="${a.Name}"`,async (err)=>{
+            await conn.query(`update user set resetToken="${RT}" where email="${a.email}"`,async (err)=>{
                 
                 if(err) {
                     console.log(err);
@@ -36,15 +36,14 @@ ForgetPassword = async function (req, res) {
                 }
                 else{
                     //Selecting content that must be given to nodemailer
-                    await conn.query(`select name,resetToken,email from user where email="${a.Email}"`,async (err,result2)=>{
+                    await conn.query(`select name,resetToken,email from user where email="${a.email}"`,async (err,result2)=>{
                         if(err){
                             console.log(err);
                             res.send("Some error Occured,inconvenience cost is deeply regretted")
                         }
                         else{
-                            console.log(result2[0]);
                             sendMail("ResetPassword",result2[0]);
-                            res.send(`Mail sent Successfully`)
+                            res.json({"success":true})
                         }
                     })
                 }

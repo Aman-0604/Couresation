@@ -20,6 +20,7 @@ function App() {
   function subject(a){
     setsub(a);
   }
+
   return (
     // all under JSX fragment(<> & </>) as we need to pass only one element in the return();
     <>
@@ -28,11 +29,12 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/explore" element={<Explore />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/login" element={<Login Task='logIn'/>} />
           <Route exact path="/profile" element={<Profile username='Aman Gupta' emailid='techbugaman@gmail.com'/>} />
           <Route exact path="/goal" element={<Goal title="Competitive Programming"/>} />
           <Route exact path="/signup" element={<Login Task='signup'/>} />
           <Route exact path="/forgetPassword" element={<Login Task='forgetPassword'/>} />
+          <Route exact path="/resetPassword/:id" element={<Login Task='resetPassword'/>}/>
           <Route exact path="/studymaterial" element={<StudyMaterial Title ={sub}/>} />
           <Route exact path="/about" element={<About />} />
         </Routes>

@@ -33,9 +33,9 @@ async function setLogin(req, res) {
             if (t) {
                 const token = jwt.sign({ uid: result[0].email }, jwt_key);
                 success = true;
-                console.log(token);
-                res.cookie('isLogin', token);
-                res.send({ success, token });
+                console.log("Token = ", token);
+                res.json({ success, token });
+                // res.cookie('isLogin', token);
             }
             else {
                 res.status(400).json('Invalid Credentials');

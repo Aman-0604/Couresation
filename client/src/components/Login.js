@@ -7,6 +7,7 @@ const propTypes = {};
 const defaultProps = { Task: "logIn" };
 
 export default function Login(props) {
+  console.log(props.Task);
   let navigate = useNavigate();
   const [credentials, setCredentials] = useState({ name: "", email: "", password: "" });
 
@@ -19,13 +20,31 @@ export default function Login(props) {
     e.preventDefault();
     let response;
     // console.log(credentials)
-    if (props.Task === 'logIn') {
+    if (props.Task === "logIn") {
       response = await fetch("http://localhost:8000/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({ email: credentials.email, password: credentials.password })//will convert the object into type JSON
+      });
+    }
+    if (props.Task === 'resetPassword') {
+      response = await fetch("http://localhost:8000/resetPassword/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ resetToken: document.URL.split("/").pop() , password: credentials.password })
+      });
+    }
+    else if (props.Task === 'forgetPassword') {
+      response = await fetch("http://localhost:8000/forgetPassword/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email: credentials.email})//will convert the object into type JSON
       });
     }
     else {
@@ -39,9 +58,19 @@ export default function Login(props) {
     }
 
     const json = await response.json();
-    if (json.success) {
+    if(props.Task==='forgetPassword' && json.success){
+      navigate("/");
+    }
+    else if(props.Task==='resetPassword' && json.success){
+      navigate("/login");
+    }
+    else if(props.Task==='resetPassword' && !json.success){
+      navigate("/");
+    }
+    
+    else if (json.success) {
+
       //save the auth token and redirect
-      // console.log("success")
       localStorage.setItem('token', json.token);
       navigate("/");
     }
@@ -74,24 +103,24 @@ export default function Login(props) {
           </div>
           <div className="right-auth-section d-flex flex-column justify-content-center ms-5">
 
-            <h2 className='fs-1 main mb-0'>{props.Task === "logIn" ? "Login" : props.Task === "forgetPassword" ? "Reset Password" : "Join Courseation"}</h2>
-            <span className={`m-0 d-${props.Task !== "forgetPassword" ? "block" : "none"}`}><Link className='fw-light small' to={props.Task === "logIn" ? '/signup' : '/login'}> {props.Task === "logIn" ? 'Create New Account' : 'Already have an Account'}</Link></span>
+            <h2 className='fs-1 main mb-0'>{props.Task === "logIn" ? "Login" : props.Task === "forgetPassword" ? "Reset Password" : props.Task === "signup"?"Join Courseation":"Gerenate New Password"}</h2>
+            <span className={`m-0 d-${props.Task === "login" ? "block" : props.Task === "signup"? "block":"none"}`}><Link className='fw-light small' to={props.Task === "logIn" ? '/signup' : '/login'}> {props.Task === "logIn" ? 'Create New Account' : 'Already have an Account'}</Link></span>
 
-            <form onSubmit={submitHandler} action={`${props.Task === "signup" ? "/signUp" : props.Task === "logIn" ? "/login" : "forgetPassword"}`} method='post'>
+            <form onSubmit={submitHandler} action={`${props.Task === "signup" ? "/signUp" : props.Task === "logIn" ? "/login" : props.Task === "forgetPassword"?"/forgetPassword":"/resetPasword"}`} method='post'>
 
               <div className={`mb-4 form d-${props.Task === "signup" ? "block" : "none"}`}>
                 <label htmlFor="exampleInputPassword1" className="form-label">Name</label>
                 <input type="text" className="form-control" id="Name" name='name' value={credentials.name} onChange={onChange} />
               </div>
 
-              <div className="mb-4 form">
+              <div className={`mb-3 form d-${props.Task !== "resetPassword" ? "block" : "none"}`}>
                 <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                 <input type="email" className="form-control" id="Email" name='email' aria-describedby="emailHelp" value={credentials.email} onChange={onChange} />
                 <div id="emailHelp" className="form-text small">Trust Us, We will not Spam</div>
               </div>
 
               <div className={`mb-3 form d-${props.Task !== "forgetPassword" ? "block" : "none"}`} >
-                <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                <label htmlFor="exampleInputPassword1" className="form-label">{props.Task !== "resetPassword" ? "Password" : "New Password"}</label>
                 <input type="password" className="form-control" id="Password" name='password' value={credentials.password} onChange={onChange} />
                 <span className={`m-0 text-end d-${props.Task !== "logIn" ? "none" : "block"}`}><Link className="fw-light small" to='/forgetPassword'>Forget Password</Link></span>
               </div>
