@@ -13,6 +13,8 @@ const conn = require('../Model/userModel');
 
 const bcrypt = require("bcrypt");
 
+// const {sendMail} = require("../Utility/Nodemailer");
+
 // const { sendMail } = require("../Utility/Nodemailer");
 
 //For encoding

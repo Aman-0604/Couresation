@@ -18,7 +18,7 @@ export default function Login(props) {
   const submitHandler = async (e) => {
     e.preventDefault();
     let response;
-    console.log(credentials)
+    // console.log(credentials)
     if (props.Task === 'logIn') {
       response = await fetch("http://localhost:8000/login/", {
         method: "POST",
@@ -41,8 +41,8 @@ export default function Login(props) {
     const json = await response.json();
     if (json.success) {
       //save the auth token and redirect
-      console.log("success")
-      localStorage.setItem('token', json.auth_token);
+      // console.log("success")
+      localStorage.setItem('token', json.token);
       navigate("/");
     }
     else {
