@@ -15,7 +15,6 @@ const conn = require("../Model/userModel");
 
 async function setLogin(req, res) {
     a = req.body;
-    console.log(a)
     //finding user to be verified 
     await conn.query(`select * from user where email = "${a.email}";`, async (err, result) => {
         if (err) {
@@ -30,16 +29,13 @@ async function setLogin(req, res) {
         else {
             // checking password 
             let success = false;
-            console.log(result);
-            console.log(result[0].password, a.password);
             const t = await bcrypt.compare(a.password, result[0].password);
-            console.log(t)
             if (t) {
                 const token = jwt.sign({ uid: result[0].email }, jwt_key);
                 success = true;
-                //creating cookies
+                console.log(token);
                 res.cookie('isLogin', token);
-                res.json({ success, token });
+                res.send({ success, token });
             }
             else {
                 res.status(400).json('Invalid Credentials');

@@ -1,10 +1,23 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 // import PropTypes from "prop-types";
 const propTypes = {};
 const defaultProps = { Page: "home" };
 export default function Navbar(props) {
-    console.log(props.Pa)
+    const [loggedIn, setLoggedIn] = useState(!!localStorage.token);
+
+    useEffect(() => {
+        console.log('Token changed:', localStorage.token);
+        setLoggedIn(!!localStorage.token);
+      }, [localStorage.getItem('token')]);  
+    
+      console.log(loggedIn)
+
+    const handleLogout = ()=>{
+        localStorage.removeItem('token');
+    }
+
     return (
         <>
             {/* Navbar starts */}
@@ -25,10 +38,13 @@ export default function Navbar(props) {
                     <div className={`collapse navbar-collapse justify-content-end`} id="navbarSupportedContent">
                         {/* d-${props.Page === "home" ? "block" :"none"} */}
                         <ul className={`navbar-nav mb-2 mb-lg-0 `}>
-                            <li className="nav-item">
+                            <li className={`nav-item d-${loggedIn ? "block":"none"}`} >
+                                <button type="button" className="btn btn-outline-success me-3" onClick={handleLogout}>Log Out</button>
+                            </li>
+                            <li className={`nav-item d-${!loggedIn? "block":"none"}`}>
                                 <Link to="/login"><button type="button" className="btn btn-outline-success me-3">Log in</button></Link>
                             </li>
-                            <li className="nav-item">
+                            <li className={`nav-item d-${!loggedIn ? "block":"none"}`}>
                                 <Link to="signup"><button type="button" className="btn btn-secondary me-5">Join for free</button></Link>
                             </li>
                         </ul>
