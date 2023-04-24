@@ -15,6 +15,7 @@ app.use('/login/', require("./Router/Login"))
 app.use('/logout/', require("./Router/Logout"))
 app.use('/forgetPassword/', require("./Router/ForgetPassword"))
 app.use('/resetPassword/', require("./Router/ResetPassword"))
+app.use('/studyMaterial/', require("./Router/StudyMaterial"))
 app.use((req, res) => { res.sendFile(`<h1>PAGE NOT FOUND<br>#404<h1>`); })
 
 app.listen(port, () => {
