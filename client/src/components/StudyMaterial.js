@@ -1,47 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import "../styles/studymaterial.css";
+import studyMaterialContext from '../context/studymaterial/studyMaterialContext';
 
-const propTypes = {};
-const defaultProps = { Title: "DSA" };
+export default function StudyMaterial() {
 
-const StudyMaterial = (props) => {
-    const initial =[];
-    const [content, setContent] = useState(initial);
-    console.log("before");
-  const fetchContent=async()=>{
-    console.log("entered the func")
-    console.log("props has been taken",props.Title);
-      const response = await fetch("http://localhost:8000/studyMaterial", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ course_id: props.Title }),
-      });
-      const data = await response.json();
-      setContent(data);
-  }
-  
+  let { subject } = useParams();
+  const material = useContext(studyMaterialContext);
+  const { content, fetchContent } = material;
+
   useEffect(() => {
-    console.log("under use effect")
-    fetchContent();
+    fetchContent(subject)
+    //eslint-disable-next-line
   }, [])
 
   return (
     <>
       <div className="text-muted row container my-5 m-auto">
         <div className="col-md-9">
+          {console.log("content is: ", content)}
           <h1 className="d-block text-center mb-4">
-            {content.course.course_id} Study Material
+            {content && content.course.course_id} Study Material
           </h1>
           <span
             className="text-decoration-underline"
             style={{ fontWeight: "bolder" }}
           >
-            About {content.course.course_name}
+            About {content && content.course.course_name}
           </span>
           <div className="my-4">
-            <p>{content.course.course_description}</p>
+            <p>{content && content.course.course_description}</p>
           </div>
 
           <span
@@ -224,22 +212,26 @@ const StudyMaterial = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-md-3 border border-5 ">
+        <div className="col-md-3 border border-5 overflow-scroll">
           <h3 className="text-center my-4">Related Links</h3>
-          <p>
-            We are temporarily pasting the related YouTube Playlists links here.
-          </p>
-          <p>{content.links[0].link_address}</p>
-          <p>{content.links[1].link_address}</p>
-          <p>{content.links[2].link_address}</p>
-          <p>{content.links[3].link_address}</p>
-          <p>{content.links[4].link_address}</p>
+          <div className="embed-responsive embed-responsive-16by9">
+            <iframe className="embed-responsive-item" src={`content && content.links[0].link_address`} /*title={`content && content.links[0].link_title`}*/ allowfullscreen></iframe>
+          </div>
+          <div className="embed-responsive embed-responsive-16by9">
+            <iframe className="embed-responsive-item" src={`content && content.links[1].link_address`} /*title={`content && content.links[1].link_title`}*/ allowfullscreen></iframe>
+          </div>
+          <div className="embed-responsive embed-responsive-16by9">
+            <iframe className="embed-responsive-item" src={`content && content.links[2].link_address`} /*title={`content && content.links[2].link_title`}*/ allowfullscreen></iframe>
+          </div>
+          <div className="embed-responsive embed-responsive-16by9">
+            <iframe className="embed-responsive-item" src={`content && content.links[3].link_address`} /*title={`content && content.links[3].link_title`}*/ allowfullscreen></iframe>
+          </div>
+          <div className="embed-responsive embed-responsive-16by9">
+            <iframe className="embed-responsive-item" src={`content && content.links[4].link_address`} /*title={`content && content.links[4].link_title`}*/ allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </>
   );
 };
 
-StudyMaterial.propTypes = propTypes;
-StudyMaterial.defaultProps = defaultProps;
-export default StudyMaterial;
