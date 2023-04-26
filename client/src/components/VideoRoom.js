@@ -5,7 +5,7 @@ import "../styles/meet.css"
 
 const APP_ID = '3cfeb5cb1e6747e59f68efe477730f23';
 const TOKEN =
-    '007eJxTYIj9vvfME46mG9M6dojOMXa2/LBKwGOq/YojV1ljZ4qJ5HIrMBgnp6UmmSYnGaaamZuYp5papplZpKalmpibmxsbpBkZSzB6pDQEMjL0XgpgYmSAQBCfmyE5v7SoODWxJDM/j4EBABXwIRw=';
+    '007eJxTYOBf+aO1kjloqePJOQpCGiFa97ssTdfrXfdRPPvv93zuoiwFBuPktNQk0+Qkw1QzcxPzVFPLNDOL1LRUE3Nzc2ODNCPjVdGeKQ2BjAy6itVMjAwQCOJzMyTnlxYVpyaWZObnMTAAAL8xIJA=';
 const CHANNEL = 'courseation';
 
 AgoraRTC.setLogLevel(4);
