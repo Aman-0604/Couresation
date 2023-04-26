@@ -3,6 +3,7 @@ import React, {
     useLayoutEffect,
     useRef,
 } from 'react';
+import "../styles/meet.css"
 
 export const VideoPlayer = ({ user }) => {
     const ref = useRef();
@@ -14,7 +15,7 @@ export const VideoPlayer = ({ user }) => {
     return (
         <div>
             {/* Uid: {user.uid} */}
-            <div ref={ref} style={{ width: '200px', height: '200px' }}>
+            <div ref={ref} className='video-container mx-1 mb-1'>
 
             </div>
         </div>

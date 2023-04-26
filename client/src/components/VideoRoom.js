@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import AgoraRTC, { createClient } from 'agora-rtc-sdk-ng';
 import { VideoPlayer } from './VideoPlayer';
+import "../styles/meet.css"
 
 const APP_ID = '3cfeb5cb1e6747e59f68efe477730f23';
 const TOKEN =
-    '007eJxTYBD4dzjKXXL2S8ZHRtlszqqxV7RNQ4ze7Niz9nPr1iu7TvAqMBgnp6UmmSYnGaaamZuYp5papplZpKalmpibmxsbpBkZxya4pjQEMjI8Z1zKwsgAgSA+N0NyfmlRcWpiSWZ+HgMDADHkIlE=';
+    '007eJxTYIj9vvfME46mG9M6dojOMXa2/LBKwGOq/YojV1ljZ4qJ5HIrMBgnp6UmmSYnGaaamZuYp5papplZpKalmpibmxsbpBkZSzB6pDQEMjL0XgpgYmSAQBCfmyE5v7SoODWxJDM/j4EBABXwIRw=';
 const CHANNEL = 'courseation';
 
 AgoraRTC.setLogLevel(4);
@@ -134,8 +135,8 @@ export const VideoRoom = () => {
     return (
         <>
             {/* {uid} */}
-            <div className='d-flex justify-content-center'>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 200px)' }}>
+            <div className='container d-flex justify-content-center'>
+                <div className='video-stream'>
                     {users.map((user) => (
                         <VideoPlayer key={user.uid} user={user} />
                     ))}
