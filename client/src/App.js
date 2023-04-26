@@ -10,6 +10,7 @@ import Goal from './components/Goal';
 import StudyMaterial from './components/StudyMaterial';
 import About from './components/About';
 import Meet from './components/Meet';
+import Class from './components/Class'
 import StudyMaterialState from './context/studymaterial/StudyMaterialState';
 import {
   BrowserRouter,
@@ -38,6 +39,7 @@ function App() {
             <Route exact path="/studymaterial/:subject" element={<StudyMaterial />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/meet" element={<Meet />} />
+            <Route exact path="/class" element={<Class />} />
           </Routes>
           <Footer />
         </BrowserRouter>

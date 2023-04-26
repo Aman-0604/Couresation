@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "../styles/goal.css"
+
 export default function Goal(props) {
     return (
         <>
@@ -28,96 +30,96 @@ export default function Goal(props) {
                     <div className="my-5">
                         <h4 className='ms-4 mb-3'><strong>Classes by {props.title} topics</strong></h4>
                         <div className="d-flex justify-content-start flex-wrap">
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
+                            </div></Link>
                         </div>
                     </div>
                     {/* Classes by educators */}
                     <div className="my-5">
                         <h4 className='ms-4 mb-3'><strong>Classes by {props.title} educators</strong></h4>
                         <div className="d-flex justify-content-start flex-wrap">
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
-                            <div className="card goal-cards text-muted ms-3 mb-3">
+                            </div></Link>
+                            <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                            </div>
+                            </div></Link>
                         </div>
                     </div>
                 </div>
