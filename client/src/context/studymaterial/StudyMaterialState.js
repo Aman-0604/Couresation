@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import StudyMaterialContext from "./studyMaterialContext";
 
 const StudyMaterialState = (props) => {
+    // const host = "https://courseation-backend.vercel.app";
     const host = "http://localhost:8000";
     let initial = {
         "course": {

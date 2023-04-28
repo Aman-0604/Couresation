@@ -18,7 +18,7 @@ export default function StudyMaterial() {
     <>
       <div className="text-muted row container my-5 m-auto">
         <div className="col-md-9">
-          {console.log("content is: ", content)}
+          {/* {console.log("content is: ", content)} */}
           <h1 className="d-block text-center mb-4">
             {content && content.course.course_id} Study Material
           </h1>
