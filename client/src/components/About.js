@@ -123,37 +123,6 @@ export default function About() {
         <div className="container my-3">
           <h1 className="text-center text-decoration-underline">Our Team</h1>
         </div>
-        <div className="container my-3">
-          <h3 className="text-center">Our Mentors</h3>
-        </div>
-        <div className="d-flex justify-content-center flex-wrap">
-          <div className="cards">
-            <div className="image_container">
-              <img
-                className="w-100 h-auto"
-                src="/images/female-user.png"
-                alt="error"
-              />
-            </div>
-            <div className="text-center fw-bold">Prof. Ruchika Malhotra</div>
-            <div className="text-center">
-              Software Engineering Branch, Head of Department
-            </div>{" "}
-          </div>
-          <div className="cards">
-            <div className="image_container">
-              <img
-                className="w-100 h-auto"
-                src="/images/female-user.png"
-                alt="error"
-              />
-            </div>
-            <div className="text-center fw-bold">Ms. Anjali Bansal</div>
-            <div className="text-center">
-              Software Engineering Branch, Ph.D Scholar
-            </div>{" "}
-          </div>
-        </div>
         <div className="container mt-5">
           <h3 className="text-center size1">Development Team</h3>
         </div>
