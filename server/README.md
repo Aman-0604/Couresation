@@ -25,7 +25,7 @@ PS: Development dependencies are packages or modules that are only required duri
 
 ---
 
-## Third Step is to make `index.js` file and `db.js` file respectively
+## Third Step is to make `index.js`
 
 ---
  1. Note : index.js will be our entry point, also it is our express app
