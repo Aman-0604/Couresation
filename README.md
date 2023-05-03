@@ -12,23 +12,35 @@ Our web app is live at https://courseation.vercel.app/
 • The website offers a range of educational resources, including videos, readings, quizzes, and assignments that are well-organized. Learners have the flexibility to progress through the course at their own pace, making it an ideal choice for those who take longer to learn. They can also communicate with instructors and other learners via live chats and dedicated doubt sessions.\
 • The website comes equipped with various features, such as progress tracking, certification, and quizzes or tests that provide instant feedback on a student's understanding of the material.
 
-# Guidlines before editing into this repo
-1. Fork this repo
-2. Clone this repo
-3. git clone "url_of_repo"
-4. Create a branch\
+# Guidlines before editing into this repo [For first contributions]
+1. Clone this repo
+2. git clone "https://github.com/MACS-DTU/macsweb.git"
+3. Create a branch\
     Change to the repository directory on your computer (if you are not already there):\
     `cd client` (this is in case you want to work with frontend)\
     `cd server` (this is in case you want to work with backend)\
     Now create a branch using the git switch command:\
     `git switch -c your-new-branch-name`
-5. Make necessary changes and add those changes\
+4. Make necessary changes and add those changes\
     `git add --a`\
     Now commit those changes using the git commit command:\
     `git commit -m "message you wanna give"`
-6. Push changes to GitHub\
+5. Push changes to GitHub\
     Push your changes using the command git push:\
     `git push -u origin your-branch-name`
-7. Submit your changes for review\
+6. Submit your changes for review\
     If you go to your repository on GitHub, you'll see a Compare & pull request button. Click on that button.\
     Now submit the pull request.
+
+# Guidlines for contributors
+
+1. git switch your-branch-name
+2. Do some changes
+3. git add --a
+4. git commit -m "your-message"
+5. git switch main
+6. git pull
+7. git switch your-branch-name
+8. git fetch
+9. git merge main
+10. git push
