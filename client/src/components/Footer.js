@@ -31,18 +31,6 @@ export default function Footer(props) {
                             </ul>
                         </div>
 
-                        <div className="col-6 col-md-2 mb-3">
-                            {/* Courseation Center */}
-                            <h5>Courseation Center</h5>
-                            <ul className="nav flex-column">
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Delhi</Link></li>
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Banglore</Link></li>
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Mumbai</Link></li>
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">UP</Link></li>
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Rajasthan</Link></li>
-                            </ul>
-                        </div>
-
                         <div className="col-md-5 offset-md-1 mb-3">
                             {/* Newletter subscription form */}
                             <form>

@@ -27,7 +27,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Section-2 starts */}
-                <div className="section container d-flex flex-row justify-content-center my-5" id="section-2">
+                <div id="section-2" className="section container d-flex justify-content-center my-5" >
                     {/* 3 cards telling benefits of joining courseation */}
                     <div className="card me-5" style={{ width: "22rem", border: "none" }}>
                         <img src="../images/live-classes.png" className="card-img-top" alt="..." />
@@ -57,9 +57,9 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Section-3 starts */}
-                <div className="section container my-5 d-flex flex-row align-items-center" id="section-3" style={{ height: '500px' }}>
+                <div id="section-3" className="section container my-5 d-flex align-items-center"  style={{ height: 'inherit' }}>
                     {/* Left subsection */}
-                    <div className="left-subsection-3 d-flex flex-column justify-content-center ms-5">
+                    <div className="left-subsection-3 d-flex flex-column justify-content-center mx-auto">
                         {/* Heading */}
                         <div className="heading-section-3 mb-5" style={{ width: '60%' }}><h1>Get the learning app</h1></div>
 
@@ -73,7 +73,7 @@ export default function Home() {
                     </div>
 
                     {/* Right subsection */}
-                    <div className="right-subsection-3 ms-5">
+                    <div className="right-subsection-3 mx-auto">
                         {/* Video on autoplay and loop mode */}
                         <video width="500" height="500" autoPlay loop>
                             <source src="../images/download-app.mp4" type="video/mp4" />

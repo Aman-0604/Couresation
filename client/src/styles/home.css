@@ -50,3 +50,21 @@
     top: -225px;
     left: 275px;
 }
+
+@media screen and (max-width :1000px) {
+    .section-1-subheading {
+        visibility:hidden;
+    }
+    #section-2 {
+        flex-direction: column;
+    }
+    #section-3 {
+        flex-direction: column;
+    }
+    .right-subsection-3 {
+        display: none;
+    }
+    .right-subsection-4 {
+        display: none;
+    }
+}

@@ -35,9 +35,6 @@ const createAgoraClient = ({
 
     const connect = async () => {
         await waitForConnectionState('DISCONNECTED');
-        console.log("APP_ID : ", process.env.APP_ID)
-        console.log("channel : ", process.env.CHANNEL)
-        console.log("Token : ", process.env.TOKEN)
         const uid = await client.join(
             APP_ID,
             CHANNEL,
