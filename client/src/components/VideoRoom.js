@@ -3,10 +3,9 @@ import AgoraRTC, { createClient } from 'agora-rtc-sdk-ng';
 import { VideoPlayer } from './VideoPlayer';
 import "../styles/meet.css"
 
-const APP_ID = '3cfeb5cb1e6747e59f68efe477730f23';
-const TOKEN =
-    '007eJxTYOBf+aO1kjloqePJOQpCGiFa97ssTdfrXfdRPPvv93zuoiwFBuPktNQk0+Qkw1QzcxPzVFPLNDOL1LRUE3Nzc2ODNCPjVdGeKQ2BjAy6itVMjAwQCOJzMyTnlxYVpyaWZObnMTAAAL8xIJA=';
-const CHANNEL = 'courseation';
+const APP_ID = process.env.APP_ID;
+const TOKEN = process.env.TOKEN;
+const CHANNEL = process.env.CHANNEL;
 
 AgoraRTC.setLogLevel(4);
 
@@ -36,7 +35,9 @@ const createAgoraClient = ({
 
     const connect = async () => {
         await waitForConnectionState('DISCONNECTED');
-
+        console.log("APP_ID : ", process.env.APP_ID)
+        console.log("channel : ", process.env.CHANNEL)
+        console.log("Token : ", process.env.TOKEN)
         const uid = await client.join(
             APP_ID,
             CHANNEL,

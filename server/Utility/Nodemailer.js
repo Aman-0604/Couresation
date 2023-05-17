@@ -1,5 +1,6 @@
 //Package to send Mail
 const nodemailer = require("nodemailer");
+require('dotenv').config()
 
 //Creating Send Mail function and exporting it to primaey files
 module.exports.sendMail = async function sendMail(str,data) {
@@ -9,7 +10,7 @@ module.exports.sendMail = async function sendMail(str,data) {
     secure: false, // true for 465, false for other ports
     auth: {
       user: "courseationStudyPartner@gmail.com",
-      pass: "qoddlvbdujgunbon"
+      pass: process.env.pass
     },
   });
 
