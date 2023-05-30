@@ -34,13 +34,15 @@ Our web app is live at https://courseation.vercel.app/
 
 # Guidlines for contributors
 
-1. `git switch your-branch-name`
-2. `Do some changes`
-3. `git add --a`
-4. `git commit -m "your-message"`
-5. `git switch main`
-6. `git pull`
-7. `git switch your-branch-name`
-8. `git fetch`
-9. `git merge main`
-10. `git push`
+```
+git switch your-branch-name
+Do some changes
+git add --a
+git commit -m "your-message"
+git switch main
+git pull
+git switch your-branch-name
+git fetch
+git merge main
+git push
+```
