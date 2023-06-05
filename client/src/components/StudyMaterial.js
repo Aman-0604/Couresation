@@ -20,68 +20,18 @@ export default function StudyMaterial() {
           <h1 className="d-block text-center mb-4">
             {content && content.course.course_id} Study Material
           </h1>
-          <span
-            className="text-decoration-underline"
-            style={{ fontWeight: "bolder" }}
-          >
-            About {content && content.course.course_name}
-          </span>
+          <span className="text-decoration-underline" style={{ fontWeight: "bolder" }}>About {content && content.course.course_name}</span>
           <div className="my-4">
             <p>{content && content.course.course_description}</p>
           </div>
 
-          <span
-            className="text-decoration-underline"
-            style={{ fontWeight: "bolder" }}
-          >
+          <span className="text-decoration-underline" style={{ fontWeight: "bolder" }}>
             Topic List
           </span>
 
           <div className="d-flex justify-content-start flex-wrap my-4">
-            {/* <div className="card goals text-muted ms-3 mb-3 d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
-              </div>
-
-            </div>
-            <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
-                <div>
-                  <h3>C</h3>
-                </div>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-              </div>
-            </div> */}
-            {/* <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
+            <div className="card goals text-muted ms-3 mb-3 d-flex flex-row justify-content-center align-items-center">
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan"}}>
                 <div>
                   <h3>C</h3>
                 </div>
@@ -91,16 +41,7 @@ export default function StudyMaterial() {
               </div>
             </div>
             <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan"}}>
                 <div>
                   <h3>C</h3>
                 </div>
@@ -110,35 +51,7 @@ export default function StudyMaterial() {
               </div>
             </div>
             <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
-                <div>
-                  <h3>C</h3>
-                </div>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-              </div>
-            </div> */}
-            {/* <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan"}} >
                 <div>
                   <h3>C</h3>
                 </div>
@@ -148,35 +61,7 @@ export default function StudyMaterial() {
               </div>
             </div>
             <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
-                <div>
-                  <h3>C</h3>
-                </div>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-              </div>
-            </div> */}
-            {/* <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan" }} >
                 <div>
                   <h3>C</h3>
                 </div>
@@ -186,16 +71,7 @@ export default function StudyMaterial() {
               </div>
             </div>
             <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
-              <div
-                className="ms-3 d-flex justify-content-center align-items-center"
-                style={{
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "cyan",
-                }}
-              >
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan", }} >
                 <div>
                   <h3>C</h3>
                 </div>
@@ -203,16 +79,56 @@ export default function StudyMaterial() {
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
               </div>
-            </div> */}
+            </div>
+            <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan" }} >
+                <div>
+                  <h3>C</h3>
+                </div>
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+              </div>
+            </div>
+            <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan" }} >
+                <div>
+                  <h3>C</h3>
+                </div>
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+              </div>
+            </div>
+            <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan" }} >
+                <div>
+                  <h3>C</h3>
+                </div>
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+              </div>
+            </div>
+            <div className="card goals text-muted ms-3 mb-3  d-flex flex-row justify-content-center align-items-center">
+              <div className="ms-3 d-flex justify-content-center align-items-center" style={{ border: "1px solid black", borderRadius: "50%", width: "50px", height: "50px", backgroundColor: "cyan" }} >
+                <div>
+                  <h3>C</h3>
+                </div>
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Div for Related Links */}
-        <div className="col-md-3 border border-5 overflow-scroll">
+        <div className="col-md-3 border border-5 overflow-scroll relatedLinks">
           <h3 className="text-center my-4">Related Links</h3>
           {content.links.map((element) => {
             return (
-              <iframe className="m-2" src={element.link} title={element.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe className="w-100" src={element.link} title={element.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             );
           })}
         </div>

@@ -31,37 +31,37 @@ export default function Goal(props) {
                         <h4 className='ms-4 mb-3'><strong>Classes by {props.title} topics</strong></h4>
                         <div className="d-flex justify-content-start flex-wrap">
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
-                                <img src="./images/aditya.png" className="card-img-top" alt="..." />
+                                <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
-                                    <h5 className="card-title">Dynamic Programming</h5>
+                                    <h5 className="card-title">Card Title</h5>
                                     <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
-                                <img src="./images/striver.png" className="card-img-top" alt="..." />
+                                <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
-                                    <h5 className="card-title">Graph</h5>
+                                    <h5 className="card-title">Card Title</h5>
                                     <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
-                                <img src="./images/babbar.png" className="card-img-top" alt="..." />
+                                <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
-                                    <h5 className="card-title">Greedy</h5>
+                                    <h5 className="card-title">Card Title</h5>
                                     <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
-                                <img src="./images/nishant.png" className="card-img-top" alt="..." />
+                                <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
-                                    <h5 className="card-title">Bit Manipulation</h5>
+                                    <h5 className="card-title">Card Title</h5>
                                     <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
-                                <img src="./images/anuj.png" className="card-img-top" alt="..." />
+                                <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
-                                    <h5 className="card-title">Advanced Algorithms</h5>
+                                    <h5 className="card-title">Card Title</h5>
                                     <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
@@ -75,42 +75,42 @@ export default function Goal(props) {
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                             <Link to="/class" className='text-decoration-none link-secondary'><div className="card goal-cards text-muted ms-3 mb-3">
                                 <img src="./images/teacher.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, minima.</p>
                                 </div>
                             </div></Link>
                         </div>
