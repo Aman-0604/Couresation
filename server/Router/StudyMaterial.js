@@ -20,7 +20,7 @@ router.get("/:subject", (req, res) => {
 
         else {
             // checking password 
-            conn.query(`select link_address from video_link where course_id = "${req.params.subject}";`, (err, res2) => {
+            conn.query(`select link from video_link where course_id = "${req.params.subject}";`, (err, res2) => {
                 if (err) {
                     console.log(err);
                     res.status(500).json("Some error Occured,inconvenience cost is deeply regretted")
