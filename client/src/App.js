@@ -32,14 +32,14 @@ function App() {
             <Route exact path="/explore" element={<Explore />} />
             <Route exact path="/login" element={<Login Task='logIn' />} />
             <Route exact path="/profile" element={<Profile username='Aman Gupta' emailid='aman@gmail.com' />} />
-            <Route exact path="/goal" element={<Goal title="Competitive Programming" />} />
+            <Route exact path="/goal/:id" element={<Goal />} />
             <Route exact path="/signup" element={<Login Task='signup' />} />
             <Route exact path="/forgetPassword" element={<Login Task='forgetPassword' />} />
             <Route exact path="/resetPassword/:id" element={<Login Task='resetPassword' />} />
             <Route exact path="/studymaterial/:subject" element={<StudyMaterial />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/meet" element={<Meet />} />
-            <Route exact path="/class" element={<Class />} />
+            <Route exact path="/class/:id" element={<Class />} />
           </Routes>
           <Footer />
         </BrowserRouter>

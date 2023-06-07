@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 export default function Class() {
+    let { id } = useParams();
     return (
         <>
             <div className="container">
                 <div className="class container d-flex flex-row justify-content-center align-items-center my-5">
                     <div className="d-flex flex-column text-muted mx-5">
-                        <h1>Class Topic Name</h1>
-                        <h4 className='text-bold'>By Teacher Name</h4>
-                        <p>Subject Name</p>
+                        <h1>{id}</h1>
+                        <h4 className='text-bold'>By Striver</h4>
+                        <p>DSA</p>
                         <div className="d-flex flex-row justify-content-center align-items-center">
                             <Link to="/meet" target='blank'><button type="button" className="btn btn-secondary mx-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" className="bi bi-play-fill" viewBox="0 0 18 18">

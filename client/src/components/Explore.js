@@ -34,14 +34,14 @@ export default function Explore() {
             "OOSE"
         ]],
         ["Mathematics and Computing", [
-            "Real Analysis",
-            "Complex Theory",
+            "Finance",
+            "Probability",
             "DSA",
             "OS",
             "COA",
             "DBMS",
             "ADA",
-            "Stastical Computing"
+            "Stastics"
         ]],
         ["Electronics and Communication Engineering", [
             "COA",
@@ -67,7 +67,7 @@ export default function Explore() {
                                 {item[1].map((item2, index2) => {
                                     return (
                                         <div className="card goals text-muted ms-3 mb-3" key={index2}>
-                                            <Link to="/goal" className='text-decoration-none link-secondary'>
+                                            <Link to={`/goal/${item2}`} className='text-decoration-none link-secondary'>
                                                 <div className="card-body">
                                                     <h5 className="card-title">{item2}</h5>
                                                 </div>
