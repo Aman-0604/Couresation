@@ -137,7 +137,7 @@ export default function About() {
             </div>
             <div className="text-center fw-bold">Aman Gupta</div>
             <div className="text-center">
-              Software Engineering Branch, 2nd Year
+              Software Engineering Branch, 3rd Year
             </div>{" "}
           </div>
           <div className="cards">
@@ -150,7 +150,7 @@ export default function About() {
             </div>
             <div className="text-center fw-bold">Abhishek Goyal</div>
             <div className="text-center">
-              Software Engineering Branch, 2nd Year
+              Software Engineering Branch, 3rd Year
             </div>{" "}
           </div>
         </div>
