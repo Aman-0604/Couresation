@@ -20,7 +20,7 @@ export default function Login(props) {
     e.preventDefault();
     let response;
     // const url="https://courseation-backend.vercel.app";
-    const url = "http://localhost:8000";
+    const url = "http://courseation-backend.vercel.app/api/auth";
     // console.log(credentials)
     if (props.Task === "logIn") {
       response = await fetch(`${url}/login/`, {
@@ -31,26 +31,8 @@ export default function Login(props) {
         body: JSON.stringify({ email: credentials.email, password: credentials.password })//will convert the object into type JSON
       });
     }
-    if (props.Task === 'resetPassword') {
-      response = await fetch(`${url}/resetPassword/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ resetToken: document.URL.split("/").pop(), password: credentials.password })
-      });
-    }
-    else if (props.Task === 'forgetPassword') {
-      response = await fetch(`${url}/forgetPassword/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ email: credentials.email })//will convert the object into type JSON
-      });
-    }
     else {
-      response = await fetch(`${url}/signup/`, {
+      response = await fetch(`${url}/createUser/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -77,7 +59,7 @@ export default function Login(props) {
       navigate("/");
     }
     else {
-      props.Task === "logIn" ? navigate("/login") : navigate("/signup");
+      props.Task === "logIn" ? navigate("/login") : navigate("/createUser");
     }
 
   }
@@ -106,9 +88,9 @@ export default function Login(props) {
           <div className="right-auth-section d-flex flex-column justify-content-center ms-5">
 
             <h2 className='fs-1 main mb-0'>{props.Task === "logIn" ? "Login" : props.Task === "forgetPassword" ? "Reset Password" : props.Task === "signup" ? "Join Courseation" : "Gerenate New Password"}</h2>
-            <span className={`m-0 d-${props.Task === "login" ? "block" : props.Task === "signup" ? "block" : "none"}`}><Link className='fw-light small' to={props.Task === "logIn" ? '/signup' : '/login'}> {props.Task === "logIn" ? 'Create New Account' : 'Already have an Account'}</Link></span>
+            <span className={`m-0 d-${props.Task === "login" ? "block" : props.Task === "signup" ? "block" : "none"}`}><Link className='fw-light small' to={props.Task === "logIn" ? '/createUser' : '/login'}> {props.Task === "logIn" ? 'Create New Account' : 'Already have an Account'}</Link></span>
 
-            <form onSubmit={submitHandler} action={`${props.Task === "signup" ? "/signUp" : props.Task === "logIn" ? "/login" : props.Task === "forgetPassword" ? "/forgetPassword" : "/resetPasword"}`} method='post'>
+            <form onSubmit={submitHandler} action={`${props.Task === "signup" ? "/createUser" : props.Task === "logIn" ? "/login" : props.Task === "forgetPassword" ? "/forgetPassword" : "/resetPasword"}`} method='post'>
 
               <div className={`mb-4 form d-${props.Task === "signup" ? "block" : "none"}`}>
                 <label htmlFor="exampleInputPassword1" className="form-label">Name</label>

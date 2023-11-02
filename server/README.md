@@ -41,3 +41,5 @@ Type `nodemon .\index.js` in a new terminal to start your server
 
 ---
 
+7yIx73FnOEB4N2CX
+mongodb+srv://techbugaman:<password>@cluster0.arqmt2c.mongodb.net/?retryWrites=true&w=majority
