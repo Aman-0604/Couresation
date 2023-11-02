@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-// import styled from "styled-components";
 import "../styles/login.css"
-// import PropTypes from "prop-types";
 const propTypes = {};
 const defaultProps = { Task: "logIn" };
 
@@ -76,9 +74,9 @@ export default function Login(props) {
           <div className="right-auth-section d-flex flex-column justify-content-center ms-5">
 
             <h2 className='fs-1 main mb-0'>{props.Task === "logIn" ? "Login" : props.Task === "forgetPassword" ? "Reset Password" : props.Task === "signup" ? "Join Courseation" : "Gerenate New Password"}</h2>
-            <span className={`m-0 d-${props.Task === "login" ? "block" : props.Task === "signup" ? "block" : "none"}`}><Link className='fw-light small' to={props.Task === "logIn" ? '/createUser' : '/login'}> {props.Task === "logIn" ? 'Create New Account' : 'Already have an Account'}</Link></span>
+            <span className={`m-0`}><Link className='fw-light small' to={props.Task === "logIn" ? '/signup' : '/login'}> {props.Task === "logIn" ? 'Create New Account' : 'Already have an Account'}</Link></span>
 
-            <form onSubmit={submitHandler} action={`${props.Task === "signup" ? "/createUser" : props.Task === "logIn" ? "/login" : props.Task === "forgetPassword" ? "/forgetPassword" : "/resetPasword"}`} method='post'>
+            <form onSubmit={submitHandler} action={`${props.Task === "signup" ? "/createUser" : "/login"}`} method='post'>
 
               <div className={`mb-4 form d-${props.Task === "signup" ? "block" : "none"}`}>
                 <label htmlFor="exampleInputPassword1" className="form-label">Name</label>
@@ -88,13 +86,11 @@ export default function Login(props) {
               <div className={`mb-3 form d-${props.Task !== "resetPassword" ? "block" : "none"}`}>
                 <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                 <input type="email" className="form-control" id="Email" name='email' aria-describedby="emailHelp" value={credentials.email} onChange={onChange} />
-                <div id="emailHelp" className="form-text small">Trust Us, We will not Spam</div>
               </div>
 
               <div className={`mb-3 form d-${props.Task !== "forgetPassword" ? "block" : "none"}`} >
                 <label htmlFor="exampleInputPassword1" className="form-label">{props.Task !== "resetPassword" ? "Password" : "New Password"}</label>
                 <input type="password" className="form-control" id="Password" name='password' value={credentials.password} onChange={onChange} />
-                <span className={`m-0 text-end d-${props.Task !== "logIn" ? "none" : "block"}`}><Link className="fw-light small" to='/forgetPassword'>Forget Password</Link></span>
               </div>
               <button type="submit" className="btn btn-primary">Submit</button>
             </form>

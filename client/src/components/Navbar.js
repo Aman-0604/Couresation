@@ -16,6 +16,7 @@ export default function Navbar(props) {
 
     const handleLogout = ()=>{
         localStorage.removeItem('token');
+
     }
 
     return (
@@ -36,9 +37,13 @@ export default function Navbar(props) {
                     {/* 'Log in' and 'Join for free' Buttons */}
 
                     <div className={`collapse navbar-collapse justify-content-end`} id="navbarSupportedContent">
-                        {/* d-${props.Page === "home" ? "block" :"none"} */}
                         <ul className={`navbar-nav mb-2 mb-lg-0 `}>
-                            <li className={`nav-item d-${loggedIn ? "block":"none"}`} >
+                        {!localStorage.getItem('token') ? <Link className='dropdown-item' to="/login">
+                                        <button type="button" className="btn">Login</button>
+                                    </Link> : <Link className='dropdown-item' to="/login">
+                                        <button type="button" onClick={handleLogout} className="btn">Logout</button>
+                                    </Link>}
+                            {/* <li className={`nav-item d-${loggedIn ? "block":"none"}`} >
                                 <button type="button" className="btn btn-outline-success me-3" onClick={handleLogout}>Log Out</button>
                             </li>
                             <li className={`nav-item d-${!loggedIn? "block":"none"}`}>
@@ -46,7 +51,7 @@ export default function Navbar(props) {
                             </li>
                             <li className={`nav-item d-${!loggedIn ? "block":"none"}`}>
                                 <Link to="signup"><button type="button" className="btn btn-secondary me-5">Join for free</button></Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
