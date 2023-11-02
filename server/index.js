@@ -1,8 +1,8 @@
 const express = require('express');
+const connectToMongo = require('./db');
 var cors = require('cors');// installed this because you can't call your api's from you web server
 
 // For Mongo Atlas
-const connectToMongo = require('./db');
 connectToMongo();
 
 // For Mongo Compass
