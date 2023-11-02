@@ -19,7 +19,6 @@ export default function Login(props) {
   const submitHandler = async (e) => {
     e.preventDefault();
     let response;
-    // const url="https://courseation-backend.vercel.app";
     const url = "http://courseation-backend.vercel.app/api/auth";
     // console.log(credentials)
     if (props.Task === "logIn") {
