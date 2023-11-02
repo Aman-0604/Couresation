@@ -19,11 +19,10 @@ export default function Login(props) {
   const submitHandler = async (e) => {
     e.preventDefault();
     let response;
-
-    const url = "https://courseation-backend.vercel.app/api/auth";
-
+    const url = "https://courseationbackend.vercel.app/api/auth";
+    // console.log(credentials)
     if (props.Task === "logIn") {
-      response = await fetch(`${url}/login/`, {
+      response = await fetch(`${url}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -32,7 +31,7 @@ export default function Login(props) {
       });
     }
     else {
-      response = await fetch(`${url}/createUser/`, {
+      response = await fetch(`${url}/createUser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -41,19 +40,8 @@ export default function Login(props) {
       });
     }
 
-    const json = await response.json();
-    if (props.Task === 'forgetPassword' && json.success) {
-      navigate("/");
-    }
-    else if (props.Task === 'resetPassword' && json.success) {
-      navigate("/login");
-    }
-    else if (props.Task === 'resetPassword' && !json.success) {
-      navigate("/");
-    }
-
-    else if (json.success) {
-
+    const json = await response.json(); 
+    if (json.success) {
       //save the auth token and redirect
       localStorage.setItem('token', json.token);
       navigate("/");
