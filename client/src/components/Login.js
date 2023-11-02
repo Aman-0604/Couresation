@@ -20,7 +20,7 @@ export default function Login(props) {
     e.preventDefault();
     let response;
 
-    const url = "http://courseation-backend.vercel.app/api/auth";
+    const url = "https://courseation-backend.vercel.app/api/auth";
 
     if (props.Task === "logIn") {
       response = await fetch(`${url}/login/`, {
