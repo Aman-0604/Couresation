@@ -9,9 +9,10 @@ import Profile from './components/Profile';
 import Goal from './components/Goal';
 import StudyMaterial from './components/StudyMaterial';
 import About from './components/About';
-import Meet from './components/Meet';
 import Class from './components/Class'
 import Alert from "./components/Alert";
+import Classroom from './components/Classroom';
+import Room from './components/Room';
 import StudyMaterialState from './context/studymaterial/StudyMaterialState';
 import {
   BrowserRouter,
@@ -41,13 +42,14 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/explore" element={<Explore />} />
+            <Route exact path="/classroom" element={<Classroom />} />
+            <Route exact path="/room/:roomId" element={<Room />} />
             <Route exact path="/login" element={<Login Task='logIn' showAlert={showAlert} />} />
             <Route exact path="/profile" element={<Profile username='Aman Gupta' emailid='aman@gmail.com' />} />
             <Route exact path="/goal/:id" element={<Goal />} />
             <Route exact path="/signup" element={<Login Task='signup' showAlert={showAlert} />} />
             <Route exact path="/studymaterial/:subject" element={<StudyMaterial />} />
             <Route exact path="/about" element={<About />} />
-            <Route exact path="/meet" element={<Meet />} />
             <Route exact path="/class/:id" element={<Class />} />
           </Routes>
           <Footer />

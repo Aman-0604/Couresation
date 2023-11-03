@@ -12,7 +12,7 @@ export default function Class() {
                         <h4 className='text-bold'>By Striver</h4>
                         <p>DSA</p>
                         <div className="d-flex flex-row justify-content-center align-items-center">
-                            <Link to="/meet" target='blank'><button type="button" className="btn btn-secondary mx-2">
+                            <Link to="/classroom" target='blank'><button type="button" className="btn btn-secondary mx-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" className="bi bi-play-fill" viewBox="0 0 18 18">
                                     <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                                 </svg>
