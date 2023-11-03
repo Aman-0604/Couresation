@@ -38,7 +38,7 @@ export default function Goal() {
                                 return (
                                     <Link to={`/class/${item[0]}`} className='text-decoration-none link-secondary' key={index}>
                                         <div className="card goal-cards text-muted ms-3 mb-3">
-                                            <img src=".images/teacher.png" className="card-img-top" alt="..." />
+                                            <img src="../images/teacher.png" className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{item[0]}</h5>
                                                 <p className="card-text">{item[1]}</p>
@@ -57,7 +57,7 @@ export default function Goal() {
                                 return (
                                     <Link to={`/class/${id}`} className='text-decoration-none link-secondary' key={index}>
                                         <div className="card goal-cards text-muted ms-3 mb-3">
-                                            <img src="./images/teacher.png" className="card-img-top" alt="..." />
+                                            <img src="../images/teacher.png" className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{item[0]}</h5>
                                                 <p className="card-text">{item[1]}</p>

@@ -27,7 +27,7 @@ export default function Class() {
                     </div>
                     <div className="d-flex flex-column mx-5">
                         <div className="card" style={{ width: "14rem" }}>
-                            <img src="./images/teacher.png" className="card-img-top" alt="..." />
+                            <img src="../images/teacher.png" className="card-img-top" alt="..." />
                         </div>
                     </div>
                 </div>
