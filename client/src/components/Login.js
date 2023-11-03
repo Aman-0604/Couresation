@@ -5,7 +5,6 @@ const propTypes = {};
 const defaultProps = { Task: "logIn" };
 
 export default function Login(props) {
-  console.log(props.Task);
   let navigate = useNavigate();
   const [credentials, setCredentials] = useState({ name: "", email: "", password: "" });
 
@@ -13,7 +12,6 @@ export default function Login(props) {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   }
 
-  // console.log(props.Task);
   const submitHandler = async (e) => {
     e.preventDefault();
     let response;
@@ -38,13 +36,15 @@ export default function Login(props) {
       });
     }
 
-    const json = await response.json(); 
+    const json = await response.json();
     if (json.success) {
+      props.showAlert("success", "Login Successful");
       //save the auth token and redirect
-      localStorage.setItem('token', json.token);
+      localStorage.setItem('token', json.auth_token);
       navigate("/");
     }
     else {
+      props.showAlert("danger", "Invalid Credentials");
       props.Task === "logIn" ? navigate("/login") : navigate("/createUser");
     }
 

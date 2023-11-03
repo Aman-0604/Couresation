@@ -1,22 +1,11 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-// import PropTypes from "prop-types";
 const propTypes = {};
 const defaultProps = { Page: "home" };
 export default function Navbar(props) {
-    const [loggedIn, setLoggedIn] = useState(!!localStorage.token);
-
-    useEffect(() => {
-        console.log('Token changed:', localStorage.token);
-        setLoggedIn(!!localStorage.token);
-      }, [localStorage.getItem('token')]);  
-    
-      console.log(loggedIn)
-
     const handleLogout = ()=>{
         localStorage.removeItem('token');
-
+        props.showAlert("success", "Logout Successful");
     }
 
     return (
@@ -38,20 +27,11 @@ export default function Navbar(props) {
 
                     <div className={`collapse navbar-collapse justify-content-end`} id="navbarSupportedContent">
                         <ul className={`navbar-nav mb-2 mb-lg-0 `}>
-                        {!localStorage.getItem('token') ? <Link className='dropdown-item' to="/login">
-                                        <button type="button" className="btn">Login</button>
-                                    </Link> : <Link className='dropdown-item' to="/login">
-                                        <button type="button" onClick={handleLogout} className="btn">Logout</button>
+                        {!localStorage.getItem('token') ? <Link className='dropdown-item link-success' to="/login">
+                                        <button type="button" className="btn btn-outline-success">Login</button>
+                                    </Link> : <Link className='dropdown-item link-success' to="/login">
+                                        <button type="button" onClick={handleLogout} className="btn btn-outline-success">Logout</button>
                                     </Link>}
-                            {/* <li className={`nav-item d-${loggedIn ? "block":"none"}`} >
-                                <button type="button" className="btn btn-outline-success me-3" onClick={handleLogout}>Log Out</button>
-                            </li>
-                            <li className={`nav-item d-${!loggedIn? "block":"none"}`}>
-                                <Link to="/login"><button type="button" className="btn btn-outline-success me-3">Log in</button></Link>
-                            </li>
-                            <li className={`nav-item d-${!loggedIn ? "block":"none"}`}>
-                                <Link to="signup"><button type="button" className="btn btn-secondary me-5">Join for free</button></Link>
-                            </li> */}
                         </ul>
                     </div>
                 </div>
