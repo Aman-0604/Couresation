@@ -13,6 +13,7 @@ import Class from './components/Class'
 import Alert from "./components/Alert";
 import Classroom from './components/Classroom';
 import Room from './components/Room';
+import Comingsoon from './components/Comingsoon';
 import StudyMaterialState from './context/studymaterial/StudyMaterialState';
 import {
   BrowserRouter,
@@ -44,6 +45,7 @@ function App() {
             <Route exact path="/explore" element={<Explore />} />
             <Route exact path="/classroom" element={<Classroom />} />
             <Route exact path="/room/:roomId" element={<Room />} />
+            <Route exact path="/comingsoon" element={<Comingsoon />} />
             <Route exact path="/login" element={<Login Task='logIn' showAlert={showAlert} />} />
             <Route exact path="/profile" element={<Profile username='Aman Gupta' emailid='aman@gmail.com' />} />
             <Route exact path="/goal/:id" element={<Goal />} />

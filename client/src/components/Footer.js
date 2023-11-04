@@ -13,10 +13,10 @@ export default function Footer(props) {
                             <h5>Company</h5>
                             <ul className="nav flex-column">
                                 <li className="nav-item mb-2"><Link to="about" className="nav-link p-0 text-muted">About Us</Link></li>
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Careers</Link></li>
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Blogs</Link></li>
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Privacy Policy</Link></li>
-                                <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Terms and Conditions</Link></li>
+                                <li className="nav-item mb-2"><Link to="/comingsoon" className="nav-link p-0 text-muted">Careers</Link></li>
+                                <li className="nav-item mb-2"><Link to="/comingsoon" className="nav-link p-0 text-muted">Blogs</Link></li>
+                                <li className="nav-item mb-2"><Link to="/comingsoon" className="nav-link p-0 text-muted">Privacy Policy</Link></li>
+                                <li className="nav-item mb-2"><Link to="/comingsoon" className="nav-link p-0 text-muted">Terms and Conditions</Link></li>
                             </ul>
                         </div>
 
@@ -24,10 +24,10 @@ export default function Footer(props) {
                             {/* Study Material */}
                             <h5>Study Material</h5>
                             <ul className="nav flex-column">
-                                <li className="nav-item mb-2"><Link to="/studymaterial/DSA" className="nav-link p-0 text-muted">DSA Study Material</Link></li>
-                                <li className="nav-item mb-2"><Link to="/studymaterial/ADA" className="nav-link p-0 text-muted">ADA Study Material</Link></li>
-                                <li className="nav-item mb-2"><Link to="/studymaterial/OS" className="nav-link p-0 text-muted">OS Study Material</Link></li>
-                                <li className="nav-item mb-2"><Link to="/studymaterial/CN" className="nav-link p-0 text-muted">CN Study Material</Link></li>
+                                <li className="nav-item mb-2"><Link to="/comingsoon" className="nav-link p-0 text-muted">DSA Study Material</Link></li>
+                                <li className="nav-item mb-2"><Link to="/comingsoon" className="nav-link p-0 text-muted">ADA Study Material</Link></li>
+                                <li className="nav-item mb-2"><Link to="/comingsoon" className="nav-link p-0 text-muted">OS Study Material</Link></li>
+                                <li className="nav-item mb-2"><Link to="/comingsoon" className="nav-link p-0 text-muted">CN Study Material</Link></li>
                             </ul>
                         </div>
 
