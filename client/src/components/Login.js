@@ -7,6 +7,16 @@ const defaultProps = { Task: "logIn" };
 export default function Login(props) {
   let navigate = useNavigate();
   const [credentials, setCredentials] = useState({ name: "", email: "", password: "" });
+  const isClassAdded = props.Task === "logIn" ? false : true;
+
+  const toggleClass = () => {
+    if(props.Task === "logIn") {
+      navigate("/signup");
+    }
+    else {
+      navigate("/login")
+    }
+  };
 
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -49,51 +59,98 @@ export default function Login(props) {
     }
 
   }
+
   return (
     <>
-      <div className="container login-section my-5 d-flex flex-row w-75">
-        <div className="d-flex flex-row">
-          <div className="left-auth-section d-flex flex-column">
-            <div className="auth-photograph" style={{ border: '0' }}>
-              <img src="../images/courseation-promo-image.png" className="img-fluid" alt="..." />
-            </div>
-            <div className="courseation-promo mx-5">
-              <p><strong>Over <span style={{ color: "#3dd4a9" }}>8,00,000+</span> learners trust us for their preparation</strong></p>
-              <p className='text-muted'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-balloon" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M8 9.984C10.403 9.506 12 7.48 12 5a4 4 0 0 0-8 0c0 2.48 1.597 4.506 4 4.984ZM13 5c0 2.837-1.789 5.227-4.52 5.901l.244.487a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.244-.487C4.789 10.227 3 7.837 3 5a5 5 0 0 1 10 0Zm-6.938-.495a2.003 2.003 0 0 1 1.443-1.443C7.773 2.994 8 2.776 8 2.5c0-.276-.226-.504-.498-.459a3.003 3.003 0 0 0-2.46 2.461c-.046.272.182.498.458.498s.494-.227.562-.495Z" />
-                </svg>
-                Learn from 2,000+ India’s top educators</p>
-              <p className='text-muted'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-balloon" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M8 9.984C10.403 9.506 12 7.48 12 5a4 4 0 0 0-8 0c0 2.48 1.597 4.506 4 4.984ZM13 5c0 2.837-1.789 5.227-4.52 5.901l.244.487a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.244-.487C4.789 10.227 3 7.837 3 5a5 5 0 0 1 10 0Zm-6.938-.495a2.003 2.003 0 0 1 1.443-1.443C7.773 2.994 8 2.776 8 2.5c0-.276-.226-.504-.498-.459a3.003 3.003 0 0 0-2.46 2.461c-.046.272.182.498.458.498s.494-.227.562-.495Z" />
-                </svg>
-                Access 3,00,000+ live classes, test series, courses and more for free</p>
-            </div>
-          </div>
-          <div className="right-auth-section d-flex flex-column justify-content-center ms-5">
+      {/* <!-- Main container --> */}
+      <div className={isClassAdded ? `login-signup-container sign-up-mode` : `login-signup-container`}>
 
-            <h2 className='fs-1 main mb-0'>{props.Task === "logIn" ? "Login" : props.Task === "forgetPassword" ? "Reset Password" : props.Task === "signup" ? "Join Courseation" : "Gerenate New Password"}</h2>
-            <span className={`m-0`}><Link className='fw-light small' to={props.Task === "logIn" ? '/signup' : '/login'}> {props.Task === "logIn" ? 'Create New Account' : 'Already have an Account'}</Link></span>
+        {/* <!-- Forms Container --> */}
+        <div className="forms-container">
+          {/* <!-- Sign in / Sign up --> */}
+          <div className="signin-signup">
 
-            <form onSubmit={submitHandler} action={`${props.Task === "signup" ? "/createUser" : "/login"}`} method='post'>
+            {/* <!-- Sign in form --> */}
+            {/* <!-- Form required for sign in to the platform --> */}
+            <form action={`${props.Task === "signup" ? "/createUser" : "/login"}`} method='post' className="sign-in-form formComponent" onSubmit={submitHandler}>
+              <h2 className="title">Sign in</h2>
 
-              <div className={`mb-4 form d-${props.Task === "signup" ? "block" : "none"}`}>
-                <label htmlFor="exampleInputPassword1" className="form-label">Name</label>
-                <input type="text" className="form-control" id="Name" name='name' value={credentials.name} onChange={onChange} />
+              {/* <!-- Input field for email --> */}
+              <div className="input-field">
+                <i className="fas fa-envelope"></i>
+                <input type="email" name='email' aria-describedby="emailHelp" placeholder="Email" value={credentials.email} onChange={onChange} />
               </div>
 
-              <div className={`mb-3 form d-${props.Task !== "resetPassword" ? "block" : "none"}`}>
-                <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                <input type="email" className="form-control" id="Email" name='email' aria-describedby="emailHelp" value={credentials.email} onChange={onChange} />
+              {/* <!-- Input field for password --> */}
+              <div className="input-field">
+                <i className="fas fa-lock"></i>
+                <input type="password" placeholder="Password" name='password' value={credentials.password} onChange={onChange} />
               </div>
 
-              <div className={`mb-3 form d-${props.Task !== "forgetPassword" ? "block" : "none"}`} >
-                <label htmlFor="exampleInputPassword1" className="form-label">{props.Task !== "resetPassword" ? "Password" : "New Password"}</label>
-                <input type="password" className="form-control" id="Password" name='password' value={credentials.password} onChange={onChange} />
-              </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
+              {/* <!-- Login button --> */}
+              <input type="submit" value="Login" className="loginPageButton solid" />
             </form>
+
+            {/* <!-- Sign up form --> */}
+            {/* <!-- Form required for sign up to the platform --> */}
+            <form action={`${props.Task === "signup" ? "/createUser" : "/login"}`} method='post' className="sign-up-form formComponent" onSubmit={submitHandler}>
+              <h2 className="title">Sign up</h2>
+
+              {/* <!-- Input field for username --> */}
+              <div className="input-field">
+                <i className="fas fa-user"></i>
+                <input type="text" placeholder="Name" name='name' value={credentials.name} onChange={onChange} />
+              </div>
+
+              {/* <!-- Input field for email --> */}
+              <div className="input-field">
+                <i className="fas fa-envelope"></i>
+                <input type="email" name='email' aria-describedby="emailHelp" placeholder="Email" value={credentials.email} onChange={onChange} />
+              </div>
+
+              {/* <!-- Input field for password --> */}
+              <div className="input-field">
+                <i className="fas fa-lock"></i>
+                <input type="password" placeholder="Password" name='password' value={credentials.password} onChange={onChange} />
+              </div>
+
+              {/* <!-- Sign up button --> */}
+              <input type="submit" className="loginPageButton" value="Sign up" />
+            </form>
+          </div>
+        </div>
+
+        {/* <!-- Panels Container --> */}
+        <div className="panels-container">
+
+          {/* <!-- Left panel --> */}
+          <div className="panel left-panel">
+            <div className="content">
+              <h3>New here ?</h3>
+              <p>
+                No problem. You are just one step away from being a part of a superb family.
+                Hit the below button.
+              </p>
+              <button className="loginPageButton transparent" id="sign-up-btn" onClick={toggleClass}>
+                Sign up
+              </button>
+            </div>
+            <img src="./log.svg" className="loginPageImage" alt="" />
+          </div>
+
+          {/* <!-- Right panel --> */}
+          <div className="panel right-panel">
+            <div className="content">
+              <h3>One of us ?</h3>
+              <p>
+                Yayy!! We all are sailing on the same ship.
+                Hit the below button.
+              </p>
+              <button className="loginPageButton transparent" id="sign-in-btn" onClick={toggleClass}>
+                Sign in
+              </button>
+            </div>
+            <img src="./register.svg" className="loginPageImage" alt="" />
           </div>
         </div>
       </div>
