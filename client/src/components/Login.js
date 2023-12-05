@@ -135,7 +135,7 @@ export default function Login(props) {
                 Sign up
               </button>
             </div>
-            <img src="./log.svg" className="loginPageImage" alt="" />
+            <img src="./images/log.svg" className="loginPageImage" alt="login_image" />
           </div>
 
           {/* <!-- Right panel --> */}
@@ -150,7 +150,7 @@ export default function Login(props) {
                 Sign in
               </button>
             </div>
-            <img src="./register.svg" className="loginPageImage" alt="" />
+            <img src="./images/register.svg" className="loginPageImage" alt="register_image" />
           </div>
         </div>
       </div>
